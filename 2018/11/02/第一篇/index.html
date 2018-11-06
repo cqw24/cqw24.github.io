@@ -331,33 +331,33 @@
 <li><p>安装Hexo（装完Node就可以使用<code>nmp</code>命令了，安装Hexo就是使用的<code>nmp</code>命令）</p>
 <blockquote>
 <p>1.在终端输入以下命令，Hexo会自动下载安装</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install -g hexo //如果安装不成功，在该命令前输入sudo</span><br><span class="line">sudo npm install -g hexo //当上一行命令不成功，则输入本行命令</span><br></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo <span class="comment">//如果安装不成功，在该命令前输入sudo</span></span><br><span class="line">sudo npm install -g hexo <span class="comment">//当上一行命令不成功，则输入本行命令</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
 <p>   2.新建一个存放本地博客资源的文件夹Blog，在终端打开Blog文件（<code>cd Blog路径</code>），输入以下命令，该命令会新建Hexo需要的所有文件夹</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo init</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
 <p>   3.输入以下命令，下载Hexo所有的资源，至此Hexo本地博客就已经搭建成功了</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install</span><br></pre></td></tr></table></figure>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
 <p>   4.输入以下命令就可以在浏览器打开本地博客了，由于还未同步至GitHub，所以只能在本地访问</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean //清除本地项目缓存</span><br><span class="line">hexo g //hexo generate（全拼，生成静态网页）</span><br><span class="line">hexo s //hexo server（全拼）</span><br></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean <span class="comment">//清除本地项目缓存</span></span><br><span class="line">hexo g <span class="comment">//hexo generate（全拼，生成静态网页）</span></span><br><span class="line">hexo s <span class="comment">//hexo server（全拼）</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>同步本地博客到GitHub</p>
 <blockquote>
 <p>1.终端打开Blog文件夹，执行下面命令</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
 <p>2.安装完成后，打开<code>_config.yml</code>文件，编辑其中的deploy节点</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:yourusername/youusername.github.io.git //之前GitHub创建的仓库地址</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repo</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:yourusername/youusername.github.io.git <span class="comment">//之前GitHub创建的仓库地址</span></span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
 <p>3.保存以上配置后，输入以下命令同步本地博客到GitHub，其他人就可以在浏览器中通过<code>yourusername.github.io</code>地址访问博客了</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d //将本地博客发布至GitHub</span><br></pre></td></tr></table></figure>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d <span class="comment">//将本地博客发布至GitHub</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>配置主题等(theme)</p>

@@ -329,13 +329,13 @@
 </blockquote>
 <h2 id="生成SSH-Key"><a href="#生成SSH-Key" class="headerlink" title="生成SSH Key"></a>生成SSH Key</h2><ul>
 <li><p>检查电脑是否已存在SSH Key，若已有SSH Key则拷贝到粘贴板上，若无SSH Key则生成SSH Key</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ls -al ~/.ssh</span><br></pre></td></tr></table></figure>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ls</span> -al ~<span class="string">/.ssh</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>生成SSH Key，后面为自己常用的邮箱</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</span><br><span class="line"></span><br><span class="line">//下面是选择生成密钥存放的文件位置，直接回车密钥将按照默认问价进行存储 </span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (/c/Users/you/.ssh/id_rsa): [Press enter] </span><br><span class="line"></span><br><span class="line">//下面是给密钥设置密码的，可以直接按回车，即不设置密码 </span><br><span class="line">Enter passphrase (empty for no passphrase): [Type a passphrase]</span><br><span class="line">Enter same passphrase again: [Type passphrase again]</span><br></pre></td></tr></table></figure>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"your_email@example.com"</span></span><br><span class="line"></span><br><span class="line">//下面是选择生成密钥存放的文件位置，直接回车密钥将按照默认问价进行存储 </span><br><span class="line">Generating public/<span class="keyword">private</span> rsa key pair.</span><br><span class="line">Enter <span class="built_in">file</span> <span class="keyword">in</span> which <span class="built_in">to</span> save <span class="keyword">the</span> key (/c/Users/you/.ssh/id_rsa): [Press enter] </span><br><span class="line"></span><br><span class="line">//下面是给密钥设置密码的，可以直接按回车，即不设置密码 </span><br><span class="line">Enter passphrase (<span class="literal">empty</span> <span class="keyword">for</span> no passphrase): [Type <span class="keyword">a</span> passphrase]</span><br><span class="line">Enter same passphrase again: [Type passphrase again]</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>拷贝已生成的SSH Key</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pbcopy &lt; ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pbcopy &lt; ~<span class="regexp">/.ssh/i</span>d_rsa.pub</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
