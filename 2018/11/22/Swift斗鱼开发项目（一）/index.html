@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="SSH Key,git,">
+  <meta name="keywords" content="swift,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="SSH SSH(Secure Shell)，是一种网络协议，用于计算机之间的加密登录，利用SSH协议可以有效的放置远程管理过程中的信息泄露问题。在远程登录的时候，使用密码登录每次都必须输入密码，非常麻烦。SSH提供了公钥（SHH Key）登录，可以省去密码输入的步骤，具体流程如下：">
-<meta name="keywords" content="SSH Key,git">
+<meta name="description" content="简介最近在看swift开发的相关视频，跟着小码哥的仿斗鱼直播的项目进行学习，把之前的一些遗漏知识点、直播技术以及这个项目中涉及swift的知识做个简单的总结">
+<meta name="keywords" content="swift">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SSH">
-<meta property="og:url" content="http://yoursite.com/2018/10/06/SSH-Key/index.html">
+<meta property="og:title" content="Swift仿斗鱼开发项目（一）">
+<meta property="og:url" content="http://yoursite.com/2018/11/22/Swift斗鱼开发项目（一）/index.html">
 <meta property="og:site_name" content="蔡青旺の个人博客">
-<meta property="og:description" content="SSH SSH(Secure Shell)，是一种网络协议，用于计算机之间的加密登录，利用SSH协议可以有效的放置远程管理过程中的信息泄露问题。在远程登录的时候，使用密码登录每次都必须输入密码，非常麻烦。SSH提供了公钥（SHH Key）登录，可以省去密码输入的步骤，具体流程如下：">
+<meta property="og:description" content="简介最近在看swift开发的相关视频，跟着小码哥的仿斗鱼直播的项目进行学习，把之前的一些遗漏知识点、直播技术以及这个项目中涉及swift的知识做个简单的总结">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-06T16:09:31.343Z">
+<meta property="og:updated_time" content="2018-11-22T06:53:48.251Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SSH">
-<meta name="twitter:description" content="SSH SSH(Secure Shell)，是一种网络协议，用于计算机之间的加密登录，利用SSH协议可以有效的放置远程管理过程中的信息泄露问题。在远程登录的时候，使用密码登录每次都必须输入密码，非常麻烦。SSH提供了公钥（SHH Key）登录，可以省去密码输入的步骤，具体流程如下：">
+<meta name="twitter:title" content="Swift仿斗鱼开发项目（一）">
+<meta name="twitter:description" content="简介最近在看swift开发的相关视频，跟着小码哥的仿斗鱼直播的项目进行学习，把之前的一些遗漏知识点、直播技术以及这个项目中涉及swift的知识做个简单的总结">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/10/06/SSH-Key/">
+  <link rel="canonical" href="http://yoursite.com/2018/11/22/Swift斗鱼开发项目（一）/">
 
 
 
 
 
-  <title>SSH | 蔡青旺の个人博客</title>
+  <title>Swift仿斗鱼开发项目（一） | 蔡青旺の个人博客</title>
   
 
 
@@ -253,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/10/06/SSH-Key/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/22/Swift斗鱼开发项目（一）/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chance">
@@ -270,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">SSH</h1>
+          <h1 class="post-title" itemprop="name headline">Swift仿斗鱼开发项目（一）</h1>
         
 
         <div class="post-meta">
@@ -282,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-06T15:08:35+08:00">
-                2018-10-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-22T14:39:49+08:00">
+                2018-11-22
               </time>
             
 
@@ -292,6 +292,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习Swift仿斗鱼直播项目总结/" itemprop="url" rel="index">
+                    <span itemprop="name">学习Swift仿斗鱼直播项目总结</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -320,33 +342,8 @@
       
 
       
-        <h2 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h2> <p style="text-indent:2em">SSH(Secure Shell)，是一种网络协议，用于计算机之间的加密登录，利用SSH协议可以有效的放置远程管理过程中的信息泄露问题。在远程登录的时候，使用密码登录每次都必须输入密码，非常麻烦。SSH提供了公钥（SHH Key）登录，可以省去密码输入的步骤，具体流程如下：</p>
+        <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p style="text-indent:2em">最近在看swift开发的相关视频，跟着小码哥的仿斗鱼直播的项目进行学习，把之前的一些遗漏知识点、直播技术以及这个项目中涉及swift的知识做个简单的总结</p>
 
-<a id="more"></a>
-<blockquote>
-<ol>
-<li>用户将自己的公钥储存在远程主机上</li>
-<li>登录的时候远程会给用户发送一串随机字符串，用户用自己的<strong>私钥</strong>加密后再发送给远程主机</li>
-<li>远程主机用已储存的公钥进行解密，解密成功则代表用户是可信的，就可以直接登录不需密码</li>
-</ol>
-</blockquote>
-<h2 id="SSH在git上的使用"><a href="#SSH在git上的使用" class="headerlink" title="SSH在git上的使用"></a>SSH在git上的使用</h2><p></p><p style="text-indent:2em">git是分布式的代码管理工具，远程的代码管理是基于ssh的，所以要使用远程的git则需要ssh的配置。</p><p></p>
-<blockquote>
-<p>&emsp;首先，使用代码管理工具把本地的代码上传到服务器时需要加密处理，而git使用的是RSA。RSA要解决的一个核心问题是，如何使用一对特定的数字，使其中一个数字可以用来加密，而另外一个数字可以用来解密。这两个数字就是在使用git和github，gitlab的时候所遇到的公钥以及私钥。<br>&emsp;其中，公钥就是那个用来加密的数字，这也就是为什么你在本机生成了公钥之后，要上传到github的原因。从github发回来的，用那公钥加密过的数据，可以用你本地的私钥来还原。</p>
-</blockquote>
-<blockquote>
-<p><font color="red">注：</font>如果你的key丢失了，不管是公钥还是私钥，丢失一个都不能用了。解决方法：删除原有的密钥，重新再生成一次，然后再设置一次就行。在个人电脑生成密钥后，会同时生成一个公钥和一个私钥，默认情况下在用户主目录下的<code>.ssh</code>目录中，密钥为<code>id_rsa</code>，公开密钥为<code>id_rsa.pub</code>。</p>
-</blockquote>
-<h2 id="生成SSH-Key"><a href="#生成SSH-Key" class="headerlink" title="生成SSH Key"></a>生成SSH Key</h2><ul>
-<li><p>检查电脑是否已存在SSH Key，若已有SSH Key则拷贝到粘贴板上，若无SSH Key则生成SSH Key</p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ls</span> -al ~<span class="string">/.ssh</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>生成SSH Key，后面为自己常用的邮箱</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"your_email@example.com"</span></span><br><span class="line"></span><br><span class="line">//下面是选择生成密钥存放的文件位置，直接回车密钥将按照默认问价进行存储 </span><br><span class="line">Generating public/<span class="keyword">private</span> rsa key pair.</span><br><span class="line">Enter <span class="built_in">file</span> <span class="keyword">in</span> which <span class="built_in">to</span> save <span class="keyword">the</span> key (/c/Users/you/.ssh/id_rsa): [Press enter] </span><br><span class="line"></span><br><span class="line">//下面是给密钥设置密码的，可以直接按回车，即不设置密码 </span><br><span class="line">Enter passphrase (<span class="literal">empty</span> <span class="keyword">for</span> no passphrase): [Type <span class="keyword">a</span> passphrase]</span><br><span class="line">Enter same passphrase again: [Type passphrase again]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>拷贝已生成的SSH Key</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pbcopy &lt; ~<span class="regexp">/.ssh/i</span>d_rsa.pub</span><br></pre></td></tr></table></figure></li>
-</ul>
 
       
     </div>
@@ -374,9 +371,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/SSH-Key/" rel="tag"><i class="fa fa-tag"></i> SSH Key</a>
-          
-            <a href="/tags/git/" rel="tag"><i class="fa fa-tag"></i> git</a>
+            <a href="/tags/swift/" rel="tag"><i class="fa fa-tag"></i> swift</a>
           
         </div>
       
@@ -389,15 +384,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/11/02/搭建个人博客/" rel="next" title="搭建个人博客">
+                <i class="fa fa-chevron-left"></i> 搭建个人博客
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/02/搭建个人博客/" rel="prev" title="搭建个人博客">
-                搭建个人博客 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -531,7 +526,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH"><span class="nav-number">1.</span> <span class="nav-text">SSH</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSH在git上的使用"><span class="nav-number">2.</span> <span class="nav-text">SSH在git上的使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成SSH-Key"><span class="nav-number">3.</span> <span class="nav-text">生成SSH Key</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li></ol></div>
             
 
           </div>
