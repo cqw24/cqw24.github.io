@@ -4,6 +4,7 @@ date: 2015-01-01 15:08:35
 tags: 
 	- SSH Key
 	- git
+categories: git相关
 ---
 
 ## 简介
