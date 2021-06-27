@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="蔡青旺の个人博客">
 <meta property="og:description" content="简介记录在Mac上搭建基于GitHub Pages的Hexo博客的过程。GitHub Pages是GitHub自带的一项功能，可以放置网页文件到指定的文件夹，然后给一个专属的域名来展示一些项目，现在很多都用来做个人博客网站。Hexo是一个快速的博客框架，其使用Markdown解析文章，可以很快速的生成静态网页。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-13T17:57:48.000Z">
+<meta property="og:updated_time" content="2021-06-27T08:22:50.894Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建个人博客">
 <meta name="twitter:description" content="简介记录在Mac上搭建基于GitHub Pages的Hexo博客的过程。GitHub Pages是GitHub自带的一项功能，可以放置网页文件到指定的文件夹，然后给一个专属的域名来展示一些项目，现在很多都用来做个人博客网站。Hexo是一个快速的博客框架，其使用Markdown解析文章，可以很快速的生成静态网页。">
@@ -340,33 +340,33 @@
 <li><p>安装Hexo（装完Node就可以使用<code>nmp</code>命令了，安装Hexo就是使用的<code>nmp</code>命令）</p>
 <blockquote>
 <p>1.在终端输入以下命令，Hexo会自动下载安装</p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo <span class="comment">//如果安装不成功，在该命令前输入sudo</span></span><br><span class="line">sudo npm install -g hexo <span class="comment">//当上一行命令不成功，则输入本行命令</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo #如果安装不成功，在该命令前输入sudo</span><br><span class="line">sudo npm install -g hexo #当上一行命令不成功，则输入本行命令</span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
-<p>   2.新建一个存放本地博客资源的文件夹Blog，在终端打开Blog文件（<code>cd Blog路径</code>），输入以下命令，该命令会新建Hexo需要的所有文件夹</p>
+<p>2.新建一个存放本地博客资源的文件夹Blog，在终端打开Blog文件（<code>cd Blog路径</code>），输入以下命令，该命令会新建Hexo需要的所有文件夹</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">hexo init</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
-<p>   3.输入以下命令，下载Hexo所有的资源，至此Hexo本地博客就已经搭建成功了</p>
+<p>3.输入以下命令，下载Hexo所有的资源，至此Hexo本地博客就已经搭建成功了</p>
 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span></span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
-<p>   4.输入以下命令就可以在浏览器打开本地博客了，由于还未同步至GitHub，所以只能在本地访问</p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean <span class="comment">//清除本地项目缓存</span></span><br><span class="line">hexo g <span class="comment">//hexo generate（全拼，生成静态网页）</span></span><br><span class="line">hexo s <span class="comment">//hexo server（全拼）</span></span><br></pre></td></tr></table></figure>
+<p>4.输入以下命令就可以在浏览器打开本地博客了，由于还未同步至GitHub，所以只能在本地访问</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean #清除本地项目缓存</span><br><span class="line">hexo g #hexo generate（全拼，生成静态网页）</span><br><span class="line">hexo s #hexo server（全拼）</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>同步本地博客到GitHub</p>
 <blockquote>
 <p>1.终端打开Blog文件夹，执行下面命令，安装插件</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
 <p>2.安装完成后，打开<code>_config.yml</code>文件，编辑其中的deploy节点</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">deploy</span>:</span><br><span class="line">  <span class="attribute">type</span>: git</span><br><span class="line">  <span class="attribute">repo</span>: git<span class="variable">@github</span>.<span class="attribute">com</span>:yourusername/youusername.github.io.git <span class="comment">//之前GitHub创建的仓库地址</span></span><br><span class="line">  <span class="attribute">branch</span>: master</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:yourusername/youusername.github.io.git #之前GitHub创建的仓库地址</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 </blockquote>
 <blockquote>
 <p>3.保存以上配置后，输入以下命令同步本地博客到GitHub，其他人就可以在浏览器中通过<code>yourusername.github.io</code>地址访问博客了</p>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d <span class="comment">//将本地博客发布至GitHub</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d #将本地博客发布至GitHub</span><br></pre></td></tr></table></figure>
 </blockquote>
 </li>
 <li><p>配置主题等(theme)</p>
@@ -375,33 +375,47 @@
 </blockquote>
 </li>
 </ul>
-<h2 id="hexo常用命令总结"><a href="#hexo常用命令总结" class="headerlink" title="hexo常用命令总结"></a>hexo常用命令总结</h2><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">初始化网站</span><br><span class="line">$ hexo init <span class="string">[folder]</span></span><br></pre></td></tr></table></figure>
+<h2 id="hexo常用命令总结"><a href="#hexo常用命令总结" class="headerlink" title="hexo常用命令总结"></a>hexo常用命令总结</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">初始化网站</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo init [folder]</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><code>folder</code>为可选参数，用以指定初始化目录的位置，若无指定则默认为当前目录</li>
 </ul>
-<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">清理文件</span><br><span class="line"><span class="variable">$ </span>hexo clean</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">清理文件</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo clean</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>清除缓存文件<code>db.json</code>和生成文件<code>public</code>，网站显示异常时可以尝试这个命令</li>
 </ul>
-<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">新建文章</span><br><span class="line">$ hexo <span class="keyword">new</span> [layout] &lt;<span class="built_in">title</span>&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">新建文章</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo new [layout] &lt;title&gt;</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><code>layout</code>可选参数，可以指定文章类型，若无指定则默认由_config.yml文件和default_layout决定<br><code>title</code>是必填参数，用以指定文章的标题，如果title中含有空格需要使用双引号包围</li>
 </ul>
-<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">生成静态文件</span><br><span class="line">$ hexo <span class="keyword">generate</span> <span class="comment">//可缩写为hexo g</span></span><br><span class="line"></span><br><span class="line">生成后部署</span><br><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">生成静态文件</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo generate //可缩写为hexo g</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">生成后部署</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo g -d</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><code>hexo g -d</code>等价于<code>hexo d -g</code></li>
 </ul>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">启动本地服务器</span><br><span class="line">$ hexo server <span class="comment">//可缩写为hexo s</span></span><br><span class="line"></span><br><span class="line">指定服务器端口</span><br><span class="line">$ hexo s -p <span class="number">5000</span></span><br><span class="line"></span><br><span class="line">指定服务器IP地址</span><br><span class="line">$ hexo s -i <span class="number">196.168</span><span class="number">.1</span><span class="number">.1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">启动本地服务器</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo server //可缩写为hexo s</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">指定服务器端口</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo s -p 5000</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">指定服务器IP地址</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo s -i 196.168.1.1</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>默认端口为4000，默认IP为0.0.0.0</li>
 </ul>
-<figure class="highlight gams"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">部署网站</span><br><span class="line"><span class="symbol">$</span> hexo deploy <span class="comment">//可缩写为hexo d</span></span><br><span class="line"></span><br><span class="line">部署前生成</span><br><span class="line"><span class="symbol">$</span> hexo d -g</span><br></pre></td></tr></table></figure>
-<h2 id="hexo项目目录结构"><a href="#hexo项目目录结构" class="headerlink" title="hexo项目目录结构"></a>hexo项目目录结构</h2><figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">HEXO</span><br><span class="line">├──.deploy_git/   <span class="meta">#内容和public文件一样，我们部署到GitHub上的就是这个文件下的内容</span></span><br><span class="line">├──node_modules/</span><br><span class="line">├──<span class="keyword">public</span>/        <span class="meta">#存放博客所生成的所有静态文件（如静态网页等）</span></span><br><span class="line">├──scaffolds/     <span class="meta">#“支架、框架”，新建一篇博客时，就是根据这个目录下的文件进行构建的</span></span><br><span class="line">├──source/        <span class="meta">#资源文件，在其下级目录文件中存放着博客</span></span><br><span class="line">   └──_posts/     <span class="meta">#保存所有的博客</span></span><br><span class="line">├──themes/        <span class="meta">#hexo主题目，如本站点的Next主题就存放在这个文件下面</span></span><br><span class="line">├──_config.yml    <span class="meta">#全局配置文件</span></span><br><span class="line">├──.gitignore     <span class="meta">#忽略文件</span></span><br><span class="line">├──db.json        <span class="meta">#缓存文件</span></span><br><span class="line">└──<span class="keyword">package</span>.json   <span class="meta">#hexo框架的参数和所有依赖插件</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">部署网站</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo deploy //可缩写为hexo d</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">部署前生成</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> hexo d -g</span></span><br></pre></td></tr></table></figure>
+<h2 id="hexo项目目录结构"><a href="#hexo项目目录结构" class="headerlink" title="hexo项目目录结构"></a>hexo项目目录结构</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">HEXO</span><br><span class="line">├──.deploy_git/   #内容和public文件一样，我们部署到GitHub上的就是这个文件下的内容</span><br><span class="line">├──node_modules/</span><br><span class="line">├──public/        #存放博客所生成的所有静态文件（如静态网页等）</span><br><span class="line">├──scaffolds/     #“支架、框架”，新建一篇博客时，就是根据这个目录下的文件进行构建的</span><br><span class="line">├──source/        #资源文件，在其下级目录文件中存放着博客</span><br><span class="line">   └──_posts/     #保存所有的博客</span><br><span class="line">├──themes/        #hexo主题目，如本站点的Next主题就存放在这个文件下面</span><br><span class="line">├──_config.yml    #全局配置文件</span><br><span class="line">├──.gitignore     #忽略文件</span><br><span class="line">├──db.json        #缓存文件</span><br><span class="line">└──package.json   #hexo框架的参数和所有依赖插件</span><br></pre></td></tr></table></figure>
 <h2 id="博客同步管理及迁移"><a href="#博客同步管理及迁移" class="headerlink" title="博客同步管理及迁移"></a>博客同步管理及迁移</h2><p style="text-indent: 2em">当我们换电脑时，我们需要将hexo博客迁移到新电脑中；当我们想要在家和公司的电脑上都能同步博客，我们就要实现多端同步；这一部分就是记录hexo博客迁移与多端同步的。</p>
 
-<blockquote>
-<p>在上一部分中可以看到hexo项目有两部分：①部署在GitHub上的静态文件②存放在电脑本地的配置文件。所以为了实现同步或者多段操作，我们只需把存放的本地的配置文件也同步到GitHub上，并且与静态文件分开管理。这样当我们换电脑或者多端时，只需建配置文件从GitHub上clone下来进行操作后，再推到GitHub上就可以了</p>
-</blockquote>
+<p>记录这次换电脑时博客迁移遇到的坑点：</p>
+<ul>
+<li><p>hexo是基于Node.js，安装Node.js会包含环境变量及npm的安装；由于我使用了Homebrew自动安装Node，所以安装下来的Node为最新最高版本；由于版本过高导致后边提交部署到GitHub时一直报错，所以要对Node做指定版本或者降级，操作如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">方法一</span></span><br><span class="line"><span class="meta">#</span><span class="bash">1、全局安装n模块</span></span><br><span class="line">npm instlal -g n</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">2、安装指定版本</span></span><br><span class="line">n v12.4.0</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">3、卸载指定版本</span></span><br><span class="line">n rm v12.4.0</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">方法二</span></span><br><span class="line"><span class="meta">#</span><span class="bash">1、安装nvm</span></span><br><span class="line">brew install nvm</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">2、使用nvm安装node版本</span></span><br><span class="line"><span class="meta">#</span><span class="bash">2.1 安装最新版本</span></span><br><span class="line">nvm isntall node</span><br><span class="line"><span class="meta">#</span><span class="bash">2.2 安装指定版本</span></span><br><span class="line">nvm install 8.16.0</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">3、查看所有版本</span></span><br><span class="line">nvm ls</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">4、切换node版本</span></span><br><span class="line"><span class="meta">#</span><span class="bash">4.1 使用最新版本</span></span><br><span class="line">nvm use node</span><br><span class="line"><span class="meta">#</span><span class="bash">4.2 使用指定版本</span></span><br><span class="line">nvm use 10.16.2</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>分支管理问题</p>
+<ul>
+<li>GitHub仓库中有两个分支：master和hexo，将hexo设置为默认分支用于存放博客源代码，master分支用于存放部署生成的博客页面</li>
+<li>迁移时将hexo分支clone到新电脑中，在对应目录下执行<code>npm install</code>和<code>npm install hexo-deployer-git --save</code>命令</li>
+<li>hexo分支下执行<code>git add .</code>、<code>git commit -m</code>、<code>git push origin hexo</code>将修改后的源文件提交到hexo；执行<code>git push</code>报错时要先执行<code>git pull</code></li>
+<li>依次执行<code>hexo clean</code>、<code>hexo g</code>、<code>hexo d -g</code>将博客部署到master；在_config.yml中deploy节点已经配置了git路径与分支，所以部署时直接就部署到了master分支中</li>
+<li>每次修改发布新的博客时需要按照上述流程先将源文件提交至hexo分支，然后将生成的博客部署到maser分支上去</li>
+<li>npm命令的一些备注<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install moduleName # 安装模块到项目目录下</span><br><span class="line">npm install -g moduleName # -g 的意思是将模块安装到全局，具体安装到磁盘哪个位置，要看 npm config prefix 的位置</span><br><span class="line">npm install --save moduleName # --save 的意思是将模块安装到项目目录下，并在package文件的dependencies节点写入依赖</span><br><span class="line">npm install --save-dev moduleName # --save-dev 的意思是将模块安装到项目目录下，并在package文件的devDependencies节点写入依赖</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ul>
 
       
     </div>
