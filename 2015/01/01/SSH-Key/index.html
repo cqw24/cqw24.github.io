@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="蔡青旺の个人博客">
 <meta property="og:description" content="简介 SSH(Secure Shell)，是一种网络协议，用于计算机之间的加密登录，利用SSH协议可以有效的放置远程管理过程中的信息泄露问题。在远程登录的时候，使用密码登录每次都必须输入密码，非常麻烦。SSH提供了公钥（SHH Key）登录，可以省去密码输入的步骤，具体流程如下：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-13T17:57:48.000Z">
+<meta property="og:updated_time" content="2021-06-27T08:35:32.884Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SSH">
 <meta name="twitter:description" content="简介 SSH(Secure Shell)，是一种网络协议，用于计算机之间的加密登录，利用SSH协议可以有效的放置远程管理过程中的信息泄露问题。在远程登录的时候，使用密码登录每次都必须输入密码，非常麻烦。SSH提供了公钥（SHH Key）登录，可以省去密码输入的步骤，具体流程如下：">
@@ -293,6 +293,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/git相关/" itemprop="url" rel="index">
+                    <span itemprop="name">git相关</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -345,7 +367,8 @@
 <figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"your_email@example.com"</span></span><br><span class="line"></span><br><span class="line">//下面是选择生成密钥存放的文件位置，直接回车密钥将按照默认问价进行存储 </span><br><span class="line">Generating public/<span class="keyword">private</span> rsa key pair.</span><br><span class="line">Enter <span class="built_in">file</span> <span class="keyword">in</span> which <span class="built_in">to</span> save <span class="keyword">the</span> key (/c/Users/you/.ssh/id_rsa): [Press enter] </span><br><span class="line"></span><br><span class="line">//下面是给密钥设置密码的，可以直接按回车，即不设置密码 </span><br><span class="line">Enter passphrase (<span class="literal">empty</span> <span class="keyword">for</span> no passphrase): [Type <span class="keyword">a</span> passphrase]</span><br><span class="line">Enter same passphrase again: [Type passphrase again]</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>拷贝已生成的SSH Key</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pbcopy &lt; ~<span class="regexp">/.ssh/i</span>d_rsa.pub</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pbcopy &lt; ~<span class="regexp">/.ssh/i</span>d_rsa.pub</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
 
       
@@ -487,7 +510,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
